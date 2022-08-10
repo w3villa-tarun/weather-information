@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&family=Rubik:wght@300;700&display=swap');
+
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+
+}
+p{
+	margin: 0;
+}
+/*common classes*/
+.mt-0{
+	margin-top: 0;
+}
+.mb-0{
+	margin-bottom: 0;
+}
+.m-0{
+	margin: 0;
+}
+.text-primary{
+	color: #03a9f4;
+}
+.font-50{
+	font-size: 50px;
+}
+.container{
+	width: 1000px;
+	margin: auto;
+}
+.card{
+	margin-top: 90px;
+	background-color: #bce5f6;
+	border-top: 10px solid #333; 
+	padding: 30px;
+}
+.card .card-inner{
+	display: flex;
+
+}
+.card .card-inner input{
+	border: unset;
+	line-height: 34px;
+	padding: 5px 15px;
+	border-radius: 10px;
+	width: 280px;
+	border: 1px solid #537a8b;
+	margin-right: 10px;
+}
+.card .card-inner input:focus{
+	outline: unset;
+	border-color: blue;
+}
+.card .card-inner button{
+	border: unset;
+	line-height: 34px;
+    background-color: #2196f3;
+    color: white;
+    padding: 5px 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card .card-inner button:hover{
+	background-color: #1a7fcf;
+}
+.information-fetched{
+
+}
+.information-fetched .inner-card{
+    border-left: 5px solid skyblue;
+    padding: 30px;
+    background-color: white;
+    width: 430px;
+    margin-top: 30px;
+}
