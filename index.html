@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Weather</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<link rel="stylesheet" href="assets/css/style.css">
-		<script src="assets/js/weatherInfo.js"></script>
-	</head>
-	<body>
-		<section>
-			<div class="container">
-				<div class="card">
-					<h1 class="mt-0">Weather Information</h1>
-					<div class="card-inner">
-						<div><input type="text" placeholder="Enter location"></div>
-						<div><button>Submit</button></div>
-					</div>
-					<br>
-					<hr/>
-					<div class="information-fetched">
-						<div class="inner-card">
-							<div class="weather-icon"><img src="https://www.pngall.com/wp-content/uploads/11/Weather-No-Background.png" alt=""></div>
-							<h1 class="mt-0 mb-0">Country Capital</h1>
-							<p class="text-primary">New Delhi</p>
-							<h6 class="m-0 font-50">36 °C</h6>
-							<div>Partly sunny.</div>
-							<br>
-							<div class="mb-5"><b>Feels Like:</b> 46 °C</div>
-							<div class="mb-5"><b>Forecast:</b> 32 / 28 °C</div>
-							<div class="mb-5"><b>Wind:</b> 13 km/h ↑ from Southeast</div>
-							<div class="mb-5"><b>Country:</b> India</div>	
-							<div class="mb-5"><b>Country High:</b> 38 °C Firozpur</div>	
-							<div class="mb-5"><b>Country Low:</b> 12 °C Ootacamund</div>	
-							<div class="mb-5"><b>Max Wind:</b> 44 km/h Mahrajganj</div>	
-							<div class="mb-5"><b>Sunrise:</b> 5:45AM</div>	
-							<div class="mb-5"><b>Sunset:</b> 7:45PM</div>	
-						</div>
+
+<head>
+	<title>Weather</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="assets/js/weatherInfo.js"></script>
+</head>
+
+<body>
+	<section>
+		<div class="container">
+			<div class="card">
+				<h1 class="mt-0">Weather Information</h1>
+				<div class="card-inner">
+					<div><input type="text" placeholder="Enter location" id="city"></div>
+					<div><button onclick="loadWeatherInfo()">Submit</button></div>
+				</div>
+				<br>
+				<hr />
+				<div class="information-fetched">
+					<div class="inner-card">
+						<div class="weather-icon"><img
+								src="https://www.pngall.com/wp-content/uploads/11/Weather-No-Background.png" alt=""
+								id="icon"></div>
+						<h6 class="m-0 font-50" id="temp">36 °C</h6>
+						<div id="description" class="text-capitalize">Partly sunny.</div>
+						<br>
+						<div class="mb-5"><b>Feels Like:</b> <span id="feels-like"> 46 °C </span></div>
+						<div class="mb-5"><b>Forecast:</b> <span id="maxTemp"> 32 </span> / <span id="minTemp"> 28 °C
+							</span></div>
+						<div class="mb-5"><b>Wind:</b> <span id="wind"> 13 km/h </span></div>
+						<div class="mb-5"><b>Humidity:</b> <span id="humidity"> 13 % </span></div>
+						<div class="mb-5"><b>Country:</b> <span id="county"> India </span></div>
+						<div class="mb-5"><b>Sunrise:</b> <span id="sunrise"> 5:45AM </span></div>
+						<div class="mb-5"><b>Sunset:</b> <span id="sunset"> 7:45PM </span></div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<script src="assets/js/script.js"></script>
-	</body>
+		</div>
+	</section>
+</body>
+
 </html>
