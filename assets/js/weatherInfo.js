@@ -1,5 +1,7 @@
 const weatherInfo = function () {
-    const APPID = "92d54516e130d926f9bdee04d6910339";
+    const APPID = "92d54516e130d926f9bdee04d6910339"; // provide by the service provider
+
+    // Set the weather API data in the page variables
     displayWeather = function (data) {
         $('#description').html(data.weather);
         $('#temp').html(data.temp);
@@ -13,6 +15,8 @@ const weatherInfo = function () {
         $('#sunset').html(data.sunset);
         $('#icon').attr('src', data.icon);
     }
+
+    // Call the weather API, and get data
     this.getWeather = function (city) {
         var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APPID}`;
         $.ajax({
@@ -36,14 +40,15 @@ const weatherInfo = function () {
                 }
                 displayWeather(weatherInfo)
             },
-            error: function () {
+            error: function () { // Handle in case error received from the API response
                 $("#city").addClass("border-red");
-                alert("Invalid city!, Correct input format <City name, state code and country code divided by comma>");
+                alert("Invalid city!, Correct input format <City name, state code and country code seperated by comma>. Example: Noida, IN");
             }
         });
     };
 }
 
+// On page load; dsplay the result from a default location
 $(document).ready(function () {
     const info = new weatherInfo();
     //default location "Noida"
