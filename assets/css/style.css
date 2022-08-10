@@ -45,6 +45,7 @@ hr{
 	width: 1000px;
 	margin: auto;
 }
+/*Header section*/
 .card{
 	margin-top: 90px;
 	background-color: #bce5f6;
@@ -80,7 +81,7 @@ hr{
 .card .card-inner button:hover{
 	background-color: #1a7fcf;
 }
-
+/*Infromation Card*/
 .information-fetched{
 
 }
